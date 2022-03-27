@@ -127,6 +127,7 @@ span {
 @media only screen and  (max-width:768px){
   .container{
     width: 82%;
+    height: 50%;
   }
 }
 @media only screen and  (max-width:600px){
