@@ -126,13 +126,16 @@ span {
 
 @media only screen and  (max-width:768px){
   .container{
-    width: 90%;
+    width: 82%;
   }
 }
 @media only screen and  (max-width:600px){
+  html{
+    font-size: 14px;
+  };
   .container{
-    height: 100vh;
-    width: 95%;
+    height: 70vh;
+    width: 60%;
   }
   .weapons .first{
     display: flex;
@@ -140,5 +143,13 @@ span {
   }
   .weapons .first button {
     margin-bottom: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and  (max-width:400px){
+  html{
+    font-size: 12px;
   }
 }
