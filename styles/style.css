@@ -34,7 +34,8 @@ body {
   color: black;
 } */
 .container {
-  width: 80%;
+  width: 75%;
+  height: 80vh;
   max-width: 40rem;
   background-color: var(--white-color);
   padding: 4rem 3rem;
@@ -50,7 +51,7 @@ header {
   min-height: 2rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 header .title {
@@ -68,37 +69,37 @@ header .title {
 
 .weapons {
   width: 90%;
-  margin: auto;
+  margin :auto;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: space-between;
 }
 
 .weapons .first{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   margin-bottom: 3rem;
 }
-.weapons .second{
+/* .weapons .second{
   display: flex;
   justify-content:space-evenly;
-}
+} */
 
 .weapons button {
   background-color: var(--purple-color);
   color: var(--white-color);
   border: none;
-  font-size: 3rem;
-  height: 5rem;
-  width: 5rem;
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
 }
 
 .details {
-  margin-top: 30px;
+  margin-top: 5px;
   text-align: center;
 }
 .scores,
@@ -121,4 +122,23 @@ header .title {
 }
 span {
   font-weight: 600;
+}
+
+@media only screen and  (max-width:768px){
+  .container{
+    width: 90%;
+  }
+}
+@media only screen and  (max-width:600px){
+  .container{
+    height: 100vh;
+    width: 95%;
+  }
+  .weapons .first{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .weapons .first button {
+    margin-bottom: 0.5rem;
+  }
 }

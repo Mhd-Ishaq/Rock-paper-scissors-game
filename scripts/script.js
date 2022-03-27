@@ -62,45 +62,44 @@ const resultEl = document.getElementById("result");
 let[compScore, userScore]  =[0,0];
 let choices =["rock", "paper", "scissors","lizard", "spock"];
 let choices_object = {
-      rock : {
-          rock : 'draw',
-          scissor : 'win',
-          paper : 'lose',
-          lizard : 'win',
-          spock : 'lost'
-      },
-      scissor : {
-          rock : 'lose',
-          scissor : 'draw',
-          paper : 'win',
-          lizard : 'win',
-          spock : 'lose'
-      },
-      paper : {
-          rock : 'win',
-          scissor : 'lose',
-          paper : 'draw',
-          lizard : 'lost',
-          spock : 'win'
-      },
+    rock : {
+        rock : 'draw',
+        scissor : 'win',
+        paper : 'lose',
+        lizard : 'win',
+        spock : 'lost'
+    },
+    scissor : {
+        rock : 'lose',
+        scissor : 'draw',
+        paper : 'win',
+        lizard : 'win',
+        spock : 'lose'
+    },
+    paper : {
+        rock : 'win',
+        scissor : 'lose',
+        paper : 'draw',
+        lizard : 'lost',
+        spock : 'win'
+    },
 
-      lizard : {
-          rock : 'lose',
-          scissor : 'lose',
-          paper : 'win',
-          lizard : 'draw',
-          spock : 'win'
-      },
+    lizard : {
+        rock : 'lose',
+        scissor : 'lose',
+        paper : 'win',
+        lizard : 'draw',
+        spock : 'win'
+    },
 
-      spock : {
-          rock : 'win',
-          scissor : 'win',
-          paper : 'lose',
-          lizard : 'lose',
-          spock : 'draw'
-      }
-  
-  }
+    spock : {
+        rock : 'win',
+        scissor : 'win',
+        paper : 'lose',
+        lizard : 'lose',
+        spock : 'draw'
+    }
+}
 
 const game = function(input){
 let randomChoice = Math.floor(Math.random()*5);
@@ -110,20 +109,20 @@ userChoiceEl.innerHTML = `you choose <span>${input}</span>`;
 
 switch(choices_object[input][comp_choice]){
         case 'win':
-              resultEl.style.cssText = "background-color: #cefdce; color: #689f38";
-              resultEl.innerHTML = "YOU WIN";
-              userScore++;
+            resultEl.style.cssText = "background-color: #cefdce; color: #689f38";
+            resultEl.innerHTML = "YOU WIN";
+            userScore++;
             break;
-      case 'lose':
+        case 'lose':
             resultEl.style.cssText = "background-color: #ffdde0; color: #d32f2f";
             resultEl.innerHTML = "YOU LOSE";
             compScore++;
             break;
-      case 'draw':
-              resultEl.style.cssText = "background-color: #e5e5e5; color: #808080";
-              resultEl.innerHTML = "DRAW";
-          break;
-      }
-      userScoreEl.innerText =userScore;
-      compScoreEl.innerText = compScore;
+        case 'draw':
+            resultEl.style.cssText = "background-color: #e5e5e5; color: #808080";
+            resultEl.innerHTML = "DRAW";
+        break;
+    }
+        userScoreEl.innerText = userScore;
+        compScoreEl.innerText = compScore;
 };
