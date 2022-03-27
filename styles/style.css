@@ -136,7 +136,7 @@ span {
   };
   .container{
     width: 60%;
-    height: 60%;
+    height: 50%;
   }
   .weapons .first{
     display: flex;
