@@ -127,7 +127,7 @@ span {
 @media only screen and  (max-width:768px){
   .container{
     width: 82%;
-    height: 50%;
+    /*  */
   }
 }
 @media only screen and  (max-width:600px){
@@ -136,6 +136,7 @@ span {
   };
   .container{
     width: 60%;
+    height: 60%;
   }
   .weapons .first{
     display: flex;
